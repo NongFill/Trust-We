@@ -72,7 +72,3 @@ Trust-We/
 ```
 
 ---
-
-## 👥 Developer / ผู้พัฒนา
-
-พัฒนาโดย / Developed by **NongFill Team**

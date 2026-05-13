@@ -4,16 +4,16 @@ const Stripe = require("stripe");
 
 admin.initializeApp();
 
-// ใส่ Secret Key ที่ Stripe dashboardืฟ
-const stripe = Stripe("sk_test_...sk_test_51RDzjuIR8yjtpTsUKZR4joJnw4WaX5Cn5vJA4dDtLhywZZwsEKPJ63GhntwKvjRWVtpAoKof7eg56VUg3CdwKQ5Q00oMidHANC...");
+// ใส่ Secret Key ที่ Stripe dashboard ของคุณ
+const stripe = Stripe(".....");
 
 exports.createPaymentIntent = functions.https.onRequest(async (req, res) => {
   const { amount, currency } = req.body;
 
   try {
     const paymentIntent = await stripe.paymentIntents.create({
-      amount,           // เงินในหน่วยสตางค์ เช่น 1000 = 10.00 บาท
-      currency,         // 'thb'
+      amount,           
+      currency,        
       automatic_payment_methods: { enabled: true }
     });
 

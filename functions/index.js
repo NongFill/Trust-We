@@ -10,7 +10,7 @@ app.use(cors({origin: true}));
 app.get("/generate-qr", async (req, res) => {
   try {
     const {amount} = req.query;
-    const phoneNumber = "0991796970"; // ใส่เลขพร้อมเพย์คุณ
+    const phoneNumber = "...."; 
 
     const payload = promptpay.generatePayload(phoneNumber, {
       amount: parseFloat(amount),
